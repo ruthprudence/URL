@@ -1,0 +1,17 @@
+module.exports = {
+    moduleNameMapper: {
+      '^@testing-library/react$': '<rootDir>/node_modules/@testing-library/react/cjs/react.development.js',
+      '^@testing-library/react/(.*)$': '<rootDir>/node_modules/@testing-library/react/cjs/$1',
+      '^@testing-library/jest-dom$': '<rootDir>/node_modules/@testing-library/jest-dom/cjs/index.js',
+      '^@testing-library/jest-dom/(.*)$': '<rootDir>/node_modules/@testing-library/jest-dom/cjs/$1',
+      '^src/(.*)$': '<rootDir>/yu-ar-el_front-end/src/$1'
+    },
+    transform: {
+      '^.+\\.(js|jsx)$': 'babel-jest',
+      '^.+\\.(ts|tsx)$': 'ts-jest'
+    },
+    testEnvironment: 'jsdom',
+    moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx'],
+    setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
+  };
+  
