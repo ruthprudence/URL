@@ -1,0 +1,80 @@
+{
+  "name": "yu-ar-el_front-end",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@babel/preset-typescript": "^7.16.0",
+    "@babel/preset-react": "^7.16.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "react": "^12.1.5",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4",
+    "dotenv": "^16.3.1",
+    "firebase": "^9.23.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.5",
+    "@babel/plugin-syntax-jsx": "^7.16.5",
+    "@babel/preset-env": "^7.16.5",
+    "babel-jest": "^27.5.1",
+    "jest": "^27.5.1"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.(js|jsx|ts|tsx)$": "babel-jest"
+    },
+    "testEnvironment": "jsdom",
+    "moduleNameMapper": {
+      "^@testing-library/react$": "<rootDir>/node_modules/@testing-library/react/cjs/react.development.js",
+      "^@testing-library/react/(.*)$": "<rootDir>/node_modules/@testing-library/react/cjs/$1",
+      "^@testing-library/jest-dom$": "<rootDir>/node_modules/@testing-library/jest-dom/cjs/index.js",
+      "^@testing-library/jest-dom/(.*)$": "<rootDir>/node_modules/@testing-library/jest-dom/cjs/$1",
+      "^src/(.*)$": "<rootDir>/src/$1"
+    },
+    "transformIgnorePatterns": [
+      "/node_modules/(?!@babel).+\\.js$"
+    ]
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ],
+      "@babel/preset-react",
+      "@babel/preset-typescript"
+    ],
+    "plugins": ["@babel/plugin-syntax-jsx"]
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

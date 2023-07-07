@@ -24,3 +24,5 @@ yarn-error.log*
 
 yu-ar-el_front-end/src/config/firebaseConfig.js
 ./.env
+.env
+firebaseConfig.js
